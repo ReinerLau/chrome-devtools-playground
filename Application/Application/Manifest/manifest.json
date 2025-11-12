@@ -1,6 +1,6 @@
 {
   "name": "My App",
-  "id": "test",
+  "id": "test1",
   "start_url": "./",
   "display": "standalone",
   "icons": [

@@ -1,12 +1,17 @@
 {
   "name": "My App",
-  "id": "test1",
   "start_url": "./",
   "display": "standalone",
   "icons": [
     {
       "src": "./icon.png",
       "sizes": "512x512"
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+app",
+      "url": "Application/Application/Manifest/?name=%s"
     }
   ]
 }

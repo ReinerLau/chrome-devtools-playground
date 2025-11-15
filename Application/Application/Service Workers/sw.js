@@ -36,3 +36,11 @@ self.addEventListener("push", (event) => {
   };
   event.waitUntil(self.registration.showNotification(title, options));
 });
+
+self.addEventListener("sync", (event) => {
+  const title = "Sync Notification";
+  const options = {
+    body: `触发${event.tag}任务`,
+  };
+  event.waitUntil(self.registration.showNotification(title, options));
+});

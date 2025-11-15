@@ -8,10 +8,16 @@
   </head>
   <body>
     <h1>Service Workers</h1>
+    <button id="sync-button">Sync</button>
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("./sw.js");
         Notification.requestPermission();
+        document.getElementById("sync-button").addEventListener("click", () => {
+          navigator.serviceWorker.ready.then((registration) => {
+            registration.sync.register("sync-tag");
+          });
+        });
       }
     </script>
   </body>
